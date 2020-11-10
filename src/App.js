@@ -12,7 +12,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <Component name={"try to put and int here or to delete this prop and look into the console"} />
+        <Component user={ { nome: "gigio", livello: "low" } } age={42} />
       </header>
     </div>
   );

@@ -3,16 +3,21 @@ import React from 'react'
 
 class Component extends React.Component {
   static propTypes = {
-    name: PropTypes.string.isRequired
+    user: PropTypes.exact({
+      name: PropTypes.string.isRequired,
+      profile: PropTypes.string.isRequired
+    })
   }
 
   render() {
-    return (<div>{this.props.name}</div>)
+    const { user } = this.props
+    return (
+      <div>
+        <h1>{user.name}</h1>
+        <h5>{user.profile}</h5>
+      </div>
+    )
   }
-}
-
-Component.propTypes = {
-  name: PropTypes.string
 }
 
 export default Component
